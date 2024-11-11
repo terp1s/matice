@@ -41,82 +41,144 @@ Important: You may not use numpy or any other Python library that provides matri
 
 Sample usage #1:
 
->>> m = Matrix([[2, 3, 4], [5, 6, 7]])
->>> 
->>> >>> m.vals() 
->>> [[2, 3, 4], [5, 6, 7]]
->>>
->>> m
->>> 
->>> 2 3 4
->>> 5 6 7
->>> 
->>> n = Matrix([[1, 2, 3], [2, 3, 4]])
->>> n
->>> 1 2 3
->>> 2 3 4
->>> m + n
->>> 3 5 7
->>> 7 9 11
->>> m - n
->>> 1 1 1
->>> 3 3 3
+> m = Matrix([[2, 3, 4], [5, 6, 7]])
+>
+> m.vals() 
+> [[2, 3, 4], [5, 6, 7]]
+>
+> m
+> 
+> 2 3 4
+> 
+> 5 6 7
+> 
+> n = Matrix([[1, 2, 3], [2, 3, 4]])
+> n
+> 1 2 3
+> 
+> 2 3 4
+>
+> 
+> m + n
+> 
+> 3 5 7
+> 
+> 7 9 11
+>
+> 
+> m - n
+> 
+> 1 1 1
+> 
+> 3 3 3
 
 
 Sample usage #2:
 
 >>> m = Matrix([[2, 3], [4, 5]])
 >>> m
+>>>
+>>> 
 >>> 2 3
+>>> 
 >>> 4 5
+>>> 
 >>> n = Matrix([[1, 2], [3, 4]])
+>>> 
 >>> n
+>>>
+>>> 
 >>> 1 2
+>>> 
 >>> 3 4
+>>> 
 >>> m * 2
+>>>
 >>> 4 6
+>>> 
 >>> 8 10
+>>> 
 >>> m * n
+>>> 
 >>> 11 16
+>>> 
 >>> 19 28
+>>>
+>>> 
 >>> n * m
+>>> 
 >>> 10 13
+>>> 
 >>> 22 29
+>>> 
 >>> p = Matrix([[0, 2, 4], [1, 3, 5]])
+>>> 
 >>> p
+>>> 
 >>> 0 2 4
+>>> 
 >>> 1 3 5
+>>>
+>>> 
 >>> p * 2
+>>> 
 >>> 0 4 8
+>>> 
 >>> 2 6 10
+>>>
+>>> 
 >>> n * p
+>>> 
 >>> 2 8 14
+>>> 
 >>> 4 18 32
 
 
 Sample usage #3:
 
 >>> m = Matrix([[1, 2, 3], [2, 3, 4], [3, 4, 5]])
->>> m
-1 2 3
-2 3 4
-3 4 5
+>>>
+>>> 
+>>> 1 2 3
+>>> 
+>>>2 3 4
+>>> 
+>>>3 4 5
+>>>
+>>> 
 >>> m.is_symmetric()
-True
+>>> 
+>>>True
+>>> 
 >>> i = identity_matrix(3)
+>>> 
 >>> i
-1 0 0
-0 1 0
-0 0 1
+>>>
+>>> 
+>>>1 0 0
+>>>0 1 0
+>>>0 0 1
+>>>
+>>> 
 >>> i.is_symmetric()
-True
+>>> 
+>>>True
+>>> 
 >>> m * i
-1 2 3
-2 3 4
-3 4 5
+>>> 
+>>>1 2 3
+>>> 
+>>>2 3 4
+>>> 
+>>>3 4 5
+>>> 
 >>> zero_matrix(2, 3)
-0 0 0
-0 0 0
+>>> 
+>>>0 0 0
+>>> 
+>>>0 0 0
+>>>
+
 Hints:
 
 In your __mul__ method you'll need to test whether the argument is a Matrix or a scalar, to know what kind of multiplication to perform. You can call 'isinstance(x, Matrix)', which returns True if x is a Matrix, otherwise False.
