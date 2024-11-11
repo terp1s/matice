@@ -42,9 +42,13 @@ Important: You may not use numpy or any other Python library that provides matri
 Sample usage #1:
 
 >>> m = Matrix([[2, 3, 4], [5, 6, 7]])
+>>> 
 >>> m.vals()
+>>> 
 [[2, 3, 4], [5, 6, 7]]
+
 >>> m
+>>> 
 2 3 4
 5 6 7
 >>> n = Matrix([[1, 2, 3], [2, 3, 4]])
